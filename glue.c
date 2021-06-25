@@ -32,6 +32,7 @@
 
 #include <uk/tinyalloc.h>
 #include <uk/alloc_impl.h>
+#include <uk/arch/limits.h> /* for __PAGE_SIZE */
 #include <string.h> /* for memset */
 #include <tinyalloc.h>
 
@@ -89,8 +90,8 @@ struct uk_alloc *uk_tinyalloc_init(void *base, size_t len)
 		CONFIG_LIBTINYALLOC_SPLIT_THRESH,
 		CONFIG_LIBTINYALLOC_ALIGNMENT);
 
-	uk_alloc_init_malloc_ifmalloc(a, uk_tinyalloc_malloc,
-					 uk_tinyalloc_free, NULL);
+	uk_alloc_init_malloc_ifmalloc(a, uk_tinyalloc_malloc, uk_tinyalloc_free,
+		NULL /* maxalloc */, NULL /* availmem */, NULL /* addmem */);
 
 	return a;
 }
