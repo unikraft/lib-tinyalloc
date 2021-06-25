@@ -32,6 +32,7 @@
 
 #include <uk/tinyalloc.h>
 #include <uk/alloc_impl.h>
+#include <uk/arch/limits.h> /* for __PAGE_SIZE */
 #include <string.h> /* for memset */
 #include <tinyalloc.h>
 
