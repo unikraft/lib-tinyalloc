@@ -30,6 +30,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <stdint.h> /* uintptr_t */
 #include <uk/tinyalloc.h>
 #include <uk/alloc_impl.h>
 #include <uk/arch/limits.h> /* for __PAGE_SIZE */

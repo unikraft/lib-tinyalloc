@@ -33,6 +33,7 @@
 #ifndef __LIBTINYALLOC_H__
 #define __LIBTINYALLOC_H__
 
+#include <stddef.h> /* size_t */
 #include <uk/alloc.h>
 
 #ifdef __cplusplus
